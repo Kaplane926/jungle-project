@@ -3,8 +3,8 @@
   <header class="page-header">
     <h1>My Cart</h1>
   </header>
-
   <div class="panel panel-default items">
+  <% if enhanced_cart[0] %>
     <table class="table table-bordered">
       <thead>
         <tr>
@@ -48,5 +48,11 @@
       <% end %>
     </div>
   </div>
+  <% else %>
+  <div>
+  Go add some items to your cart!
+  </div>
+  <%= link_to 'Shop', "/" %>
+  <% end %>
 
 </section>
