@@ -1,7 +1,6 @@
 class OrdersController < ApplicationController
 
   def show
-    puts "hio"
     @order = Order.find(params[:id])
     
   end
