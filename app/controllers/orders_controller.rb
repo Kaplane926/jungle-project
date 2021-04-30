@@ -1,7 +1,9 @@
 class OrdersController < ApplicationController
 
   def show
+    puts "hio"
     @order = Order.find(params[:id])
+    
   end
 
   def create
@@ -36,6 +38,7 @@ class OrdersController < ApplicationController
   end
 
   def create_order(stripe_charge)
+    puts "hi"
     order = Order.new(
       email: params[:stripeEmail],
       total_cents: cart_subtotal_cents,
